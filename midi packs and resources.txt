@@ -1,3 +1,4 @@
+Big Midi Collections:
 https://archive.org/details/themagicofmidiv1
 https://web.archive.org/web/20181218021854/https://www.reddit.com/r/WeAreTheMusicMakers/comments/3ajwe4/the_largest_midi_collection_on_the_internet/
 https://github.com/albertmeronyo/awesome-midi-sources
@@ -8,6 +9,7 @@ https://www.reddit.com/r/datasets/comments/3akhxy/the_largest_midi_collection_on
 https://www.vgmusic.com/
 
 
+Alternative Collections (also payed):
 https://industrykits.com/Infinite-MEGA-MIDI
 https://soundcloud.com/flp-family/2009-2019-mega-midi-collection-free-midi-pack-free-flp
 https://www.bigfishaudio.com/Deep-House-Mega-MIDI-Pack-1
@@ -31,7 +33,7 @@ https://cymatics.fm/blogs/production/midi-files
 
 
 
-Resources
+Resources and tools:
 https://github.com/gavin-peterkin/music_composition
 https://github.com/gavin-peterkin/music_composition/tree/master/src/scraping/midi
 https://www.fourmilab.ch/webtools/midicsv/
