@@ -59,3 +59,7 @@ https://github.com/PatricioGuinle/CoffeMIDI
 https://github.com/Kermalis/MIDIProgramSplitter
 https://github.com/leegee/audio-glitch
 https://github.com/sandershihacker/midi-classification-tutorial
+
+https://sox.sourceforge.net/ (Mix-merge 2 audioclips)
+sox.exe -m input1.wav input2.wav output.wav (mix -> 2 channels)
+sox.exe -M input1.wav input2.wav output.wav (merge -> 4 channels)
