@@ -36,7 +36,7 @@ def combine():
     """
 
     os.system(
-        '"sox.exe -m '  # -m: mix two audioclips, results in 2 channels; -M: merge two audioclips, results in 4 channels
+        '"sox.exe -m '  # -m: mix two audioclips, results in 2 channels (stereo); -M: merge two audioclips, results in 4 channels
         + root + '"\\data\\exports\\chords.wav" '  # First Input File
         + root + '"\\data\\exports\\melody.wav" '  # Second Input File
         + root + '"\\data\\exports\\combined.wav""'  # Output File
