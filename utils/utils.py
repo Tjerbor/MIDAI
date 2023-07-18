@@ -1,4 +1,4 @@
 from pathlib import Path
 
 def get_project_root() -> Path:
-    return str(Path(__file__).absolute().parent.parent)
+    return Path(__file__).absolute().parent.parent
