@@ -2,7 +2,7 @@ from utils.external_utils.midi2audio import *
 from utils.utils import get_project_root
 import os
 
-root = str(get_project_root())
+root = get_project_root()
 fs = FluidSynth(root + '\\data\\soundfonts\\mg_symphony_hall_bank.SF2')  # soundfont file
 
 
