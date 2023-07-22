@@ -1,5 +1,11 @@
 # MIDAI
 
+## Cloning Repository
+
+When cloning the repository, you might want to clone the main branch only because the midi branch is only storing midi resources and take up a lot of space
+Therefore use the following command:
+> git clone -b main --single-branch https://github.com/Tjerbor/MIDAI.git
+
 ## Requirements
 
 - Python 3
