@@ -9,29 +9,29 @@ def get_project_root() -> str:
     return str(Path(__file__).absolute().parent.parent)
 
 
-def midi2csv(filePath: str, outputPath: str = None):
+def midi_to_csv(file_path: str, output_path: str = None):
     """
     Converts .mid(i) file to .csv file using midicsv.exe
-    :param filePath: Input midi filepath
-    :param outputPath: Output csv filepath. If not given, will be written in input folder.
+    :param file_path: Input midi filepath
+    :param output_path: Output csv filepath. If not given, will be written in input folder.
     """
-    if outputPath == None:
-        outputPath = filePath[:len(filePath) - 3] + "csv"
+    if output_path == None:
+        output_path = file_path[:len(file_path) - 3] + "csv"
     os.system(
         "cd \"" + get_project_root() + "\\utils\\external_utils\\midicsv-1.1\""
-                                       "&& midicsv \"" + filePath + "\" \"" + outputPath + "\""
+                                       "&& midicsv \"" + file_path + "\" \"" + output_path + "\""
     )
 
 
-def csv2midi(filePath: str, outputPath: str = None):
+def csv_to_midi(file_path: str, output_path: str = None):
     """
     Converts .sv file to .midi file using csvmidi.exe
-    :param filePath: Input csv filepath
-    :param outputPath: Output mid(i) filepath. If not given, will be written in input folder.
+    :param file_path: Input csv filepath
+    :param output_path: Output mid(i) filepath. If not given, will be written in input folder.
     """
-    if outputPath == None:
-        outputPath = filePath[:len(filePath) - 3] + "mid"
+    if output_path == None:
+        output_path = file_path[:len(file_path) - 3] + "mid"
     os.system(
         "cd \"" + get_project_root() + "\\utils\\external_utils\\midicsv-1.1\""
-                                       "&& csvmidi \"" + filePath + "\" \"" + outputPath + "\""
+                                       "&& csvmidi \"" + file_path + "\" \"" + output_path + "\""
     )

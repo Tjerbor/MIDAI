@@ -6,7 +6,7 @@ root = get_project_root()
 fs = FluidSynth(root + '\\data\\soundfonts\\mg_symphony_hall_bank.SF2')  # soundfont file
 
 
-def createExportsFolder():
+def create_exports_folder():
     """
     If data/exports folder doesn't exist yet
     """
@@ -43,7 +43,7 @@ def combine():
     )
 
 
-def playMidi():
+def play_midi():
     """
     Example of playing a midi file
     """
@@ -52,7 +52,10 @@ def playMidi():
 
 
 if __name__ == '__main__':
-    createExportsFolder()
+    """
+    Example main
+    """
+    create_exports_folder()
     convert()
     combine()
-    playMidi()
+    play_midi()
