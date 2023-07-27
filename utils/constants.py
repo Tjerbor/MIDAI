@@ -1,6 +1,7 @@
-from utils.utils import get_project_root
+from pathlib import Path
 
 """
 Constant for project root path
 """
-ROOT: str = get_project_root()
+ROOT = str(Path(__file__).absolute().parent.parent)
+

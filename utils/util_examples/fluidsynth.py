@@ -58,4 +58,4 @@ if __name__ == '__main__':
     create_exports_folder()
     convert()
     combine()
-    play_midi()
+    #play_midi()

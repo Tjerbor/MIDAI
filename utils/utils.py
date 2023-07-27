@@ -1,14 +1,5 @@
-from pathlib import Path
-import os
-
 from utils.constants import ROOT
-
-def get_project_root() -> str:
-    """
-    Returns project root path
-    :rtype: str
-    """
-    return str(Path(__file__).absolute().parent.parent)
+import os
 
 def midi2csv(file_path: str, output_path: str = None):
     """
