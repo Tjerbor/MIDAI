@@ -18,8 +18,9 @@ def midi2csv(file_path: str, output_path: str = None):
     """
     if output_path == None:
         output_path = file_path[:len(file_path) - 3] + "csv"
+
     os.system(
-        f"\"{ROOT}\\utils\\external_utils\\midicsv-1.1\\midicsv.exe\" {file_path} {output_path}"
+        f"\"{ROOT}\\utils\\external_utils\\midicsv-1.1\\midicsv.exe\" \"{file_path}\" \"{output_path}\""
     )
 
 
