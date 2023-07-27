@@ -1,15 +1,16 @@
 from pathlib import Path
 import os
 
+from utils.constants import ROOT
 
 def get_project_root() -> str:
     """
     Returns project root path
+    :rtype: str
     """
     return str(Path(__file__).absolute().parent.parent)
 
-
-def midi_to_csv(file_path: str, output_path: str = None):
+def midi2csv(file_path: str, output_path: str = None):
     """
     Converts .mid(i) file to .csv file using midicsv.exe
     :param file_path: Input midi filepath
@@ -18,12 +19,11 @@ def midi_to_csv(file_path: str, output_path: str = None):
     if output_path == None:
         output_path = file_path[:len(file_path) - 3] + "csv"
     os.system(
-        "cd \"" + get_project_root() + "\\utils\\external_utils\\midicsv-1.1\""
-                                       "&& midicsv \"" + file_path + "\" \"" + output_path + "\""
+        f"\"{ROOT}\\utils\\external_utils\\midicsv-1.1\\midicsv.exe\" {file_path} {output_path}"
     )
 
 
-def csv_to_midi(file_path: str, output_path: str = None):
+def csv2midi(file_path: str, output_path: str = None):
     """
     Converts .sv file to .midi file using csvmidi.exe
     :param file_path: Input csv filepath
@@ -31,7 +31,7 @@ def csv_to_midi(file_path: str, output_path: str = None):
     """
     if output_path == None:
         output_path = file_path[:len(file_path) - 3] + "mid"
+
     os.system(
-        "cd \"" + get_project_root() + "\\utils\\external_utils\\midicsv-1.1\""
-                                       "&& csvmidi \"" + file_path + "\" \"" + output_path + "\""
+        f"\"{ROOT}\\utils\\external_utils\\midicsv-1.1\\midicsv.exe\" \"{file_path}\" \"{output_path}\""
     )

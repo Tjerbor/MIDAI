@@ -1,17 +1,15 @@
 from utils.external_utils.midi2audio import *
-from utils.utils import get_project_root
+from utils.constants import ROOT
 import os
 
-root = get_project_root()
-fs = FluidSynth(root + '\\data\\soundfonts\\mg_symphony_hall_bank.SF2')  # soundfont file
-
+fs = FluidSynth(ROOT + '\\data\\soundfonts\\mg_symphony_hall_bank.SF2')  # soundfont file
 
 def create_exports_folder():
     """
     If data/exports folder doesn't exist yet
     """
 
-    os.system('"mkdir ' + root + '\\data\\exports"')
+    os.system('"mkdir ' + ROOT + '\\data\\exports"')
 
 
 def convert():
@@ -20,13 +18,13 @@ def convert():
     """
 
     fs.midi_to_audio(
-        root + '\\data\\midis\\Cymatics - MIDI 21 - C# - chords.mid',  # Input File
-        root + '\\data\\exports\\chords.wav'  # Output File
+        ROOT + '\\data\\midis\\Cymatics - MIDI 21 - C# - chords.mid',  # Input File
+        ROOT + '\\data\\exports\\chords.wav'  # Output File
     )
 
     fs.midi_to_audio(
-        root + '\\data\\midis\\Cymatics - MIDI 22 - C# - melody.mid',
-        root + '\\data\\exports\\melody.wav'
+        ROOT + '\\data\\midis\\Cymatics - MIDI 22 - C# - melody.mid',
+        ROOT + '\\data\\exports\\melody.wav'
     )
 
 
@@ -36,10 +34,12 @@ def combine():
     """
 
     os.system(
-        '"sox.exe -m '  # -m: mix two audioclips, results in 2 channels (stereo); -M: merge two audioclips, results in 4 channels
-        + root + '"\\data\\exports\\chords.wav" '  # First Input File
-        + root + '"\\data\\exports\\melody.wav" '  # Second Input File
-        + root + '"\\data\\exports\\combined.wav""'  # Output File
+        '"sox.exe -m '
+        # -m: mix two audioclips, results in 2 channels (stereo)
+        # -M: merge two audioclips, results in 4 channels
+        + ROOT + '"\\data\\exports\\chords.wav" '  # First Input File
+        + ROOT + '"\\data\\exports\\melody.wav" '  # Second Input File
+        + ROOT + '"\\data\\exports\\combined.wav""'  # Output File
     )
 
 
@@ -48,7 +48,7 @@ def play_midi():
     Example of playing a midi file
     """
 
-    fs.play_midi(root + '\\data\\midis\\Cymatics - MIDI 21 - C# - chords.mid')
+    fs.play_midi(ROOT + '\\data\\midis\\Cymatics - MIDI 21 - C# - chords.mid')
 
 
 if __name__ == '__main__':
